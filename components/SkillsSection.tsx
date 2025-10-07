@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card"
 import { Icon } from "@iconify/react"
+import { skills } from "@/resources/editableData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,44 +47,17 @@ export default function SkillsSection() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <SkillCategory
             title="Languages"
-            skills={[
-              { name: "C#", icon: "logos:c-sharp", Highlight: true },
-              { name: "JavaScript", icon: "logos:javascript", Highlight: true },
-              { name: "HTML", icon: "logos:html-5" },
-              { name: "CSS", icon: "logos:css-3" },
-              { name: "PHP", icon: "logos:php" },
-              { name: "Kotlin", icon: "logos:kotlin" },
-              { name: "Markdown", icon: "teenyicons:markdown-outline" },
-              { name: "Bash", icon: "logos:bash" },
-            ]}
+            skills={skills.languages}
             iconsRef={iconsRef}
           />
           <SkillCategory
             title="Frameworks & Technologies"
-            skills={[
-              { name: "Node.js", icon: "logos:nodejs", Highlight: true },
-              { name: "MySQL", icon: "logos:mysql", Highlight: true },
-              { name: "React", icon: "logos:react" },
-              { name: "MongoDB", icon: "logos:mongodb" },
-              { name: "Firebase", icon: "logos:firebase" },
-            ]}
+            skills={skills.frameworks}
             iconsRef={iconsRef}
           />
           <SkillCategory
             title="Outils & IDEs"
-            skills={[
-              { name: "Figma", icon: "logos:figma", Highlight: true },
-              { name: "Git", icon: "logos:git", Highlight: true },
-              { name: "Notion", icon: "logos:notion-icon", Highlight: true },
-              { name: "Visual Studio", icon: "logos:visual-studio", Highlight: true },
-              { name: "VS Code", icon: "logos:visual-studio-code", Highlight: true },
-              { name: "Windows", icon: "logos:microsoft-windows", Highlight: true },
-              { name: "GitHub", icon: "logos:github-icon" },
-              { name: "GitLab", icon: "logos:gitlab" },
-              { name: "Linux", icon: "logos:linux-tux" },
-              { name: "Ubuntu", icon: "logos:ubuntu" },
-              { name: "CodePen", icon: "skill-icons:codepen-light" },
-            ]}
+            skills={skills.tools}
             iconsRef={iconsRef}
           />
         </div>

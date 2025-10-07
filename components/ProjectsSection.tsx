@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { projects } from "@/resources/editableData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,30 +44,7 @@ export default function ProjectsSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center">Projets</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" ref={projectsRef}>
-          {[
-            {
-              title: "SchemaSuite",
-              description:
-                "SchemaSuite est un éditeur de schémas de réseau fibrés et électriques",
-              tags: ["C#", "WPF"],
-              link: "https://www.newis.ch/schemasuite/",
-              image: "/images/SchemaSuite.png",
-            },
-            {
-              title: "Less: Prise connectée",
-              description:
-                "Travail de TIP (travail inter-discipline centré sur un projet), ",
-              tags: ["C++", "React-native", "Firebase"],
-              image: "/placeholder.svg?height=200&width=400",
-            },
-            {
-              title: "Bot Discord",
-              description:
-                "Bot discord multi-fonctions. Utilisé sur un serveur de plus de 1000 membres",
-              tags: ["MongoDB", "Node.js", "discord.js"],
-              image: null,
-            },
-          ].map((project, index) => (
+          {projects.map((project, index) => (
             <Card
               key={index}
               className="bg-black/50 border-white/10 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all duration-300"

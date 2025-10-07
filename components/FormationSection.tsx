@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { formations } from "@/resources/editableData"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,26 +59,7 @@ export default function FormationSection() {
             </div>
 
             {/* Formation Items */}
-            {[
-              {
-                title: "CFC d'Informaticien d'Entreprise",
-                institution: "CPNE-TI, Neuchâtel",
-                year: "2021 - 2025",
-                description: "",
-              },
-              {
-                title: "École Degré Secondaire",
-                institution: "La Fontenelle, Cernier",
-                year: "2018 - 2021",
-                description: "",
-              },
-              {
-                title: "École Degré Primaire",
-                institution: "Collège Le Lynx, Les Geneveys-sur-Coffrane",
-                year: "2010 - 2018",
-                description: "",
-              },
-            ].map((formation, index) => (
+            {formations.map((formation, index) => (
               <div key={index} ref={(el) => { if(el) formationRef.current.push(el); }} className="mb-8 flex items-start pl-12">
                 <div className="absolute left-6 transform -translate-x-1/2">
                   <div className="w-4 h-4 rounded-full bg-emerald-500 border-4 border-black" />

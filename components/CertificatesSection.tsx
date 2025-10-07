@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { certificates } from "@/resources/editableData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,15 +39,7 @@ export default function CertificatesSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center">Certificats</h2>
         <div className="max-w-3xl mx-auto space-y-6">
-          {[
-            {
-              title: "Preliminary English Test B1",
-              organization: "Cambridge English",
-              year: 2024,
-              description: "Le B1 Preliminary est un examen international sanctionnant un niveau intermédiaire (B1) de maîtrise de la langue anglaise.",
-              pdfUrl: "/path-to-certificate.pdf",
-            },
-          ].map((cert, index) => (
+          {certificates.map((cert, index) => (
             <Card
               key={index}
               ref={(el) => {
