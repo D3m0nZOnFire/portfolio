@@ -11,15 +11,19 @@ export default function Header() {
           <Link href="#aboutme" className="hover:text-emerald-400 transition-colors">
             A propos de moi
           </Link>
+          <div className="border-l border-white/20 h-6"></div>
           <Link href="#projects" className="hover:text-emerald-400 transition-colors">
             Projets
           </Link>
+          <div className="border-l border-white/20 h-6"></div>
           <Link href="#skills" className="hover:text-emerald-400 transition-colors">
             Connaissances
           </Link>
+          <div className="border-l border-white/20 h-6"></div>
           <Link href="#certificates" className="hover:text-emerald-400 transition-colors">
             Certificats
           </Link>
+          <div className="border-l border-white/20 h-6"></div>
           <Link href="#formations" className="hover:text-emerald-400 transition-colors">
             Formations
           </Link>
