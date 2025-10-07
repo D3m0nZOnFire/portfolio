@@ -5,7 +5,7 @@
 > npm run start
 
 # To Add
-- Add English
-  - move all text to resource file
-  - create english translation
-- Add work experiences
+- [ ] Add English
+  -  [ ] move all text to resource file
+  -  [ ] create english translation
+-  [ ] Add work experiences
