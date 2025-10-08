@@ -54,7 +54,7 @@ export const projects = [
     {
         title: "Bot Discord",
         description:
-        "Bot discord multi-fonctions. Utilisé sur un serveur de plus de 1000 membres",
+        "Bot discord multi-fonctions. Utilisé sur un serveur de plus de 10'000 membres",
         tags: ["MongoDB", "Node.js", "discord.js"],
         image: null,
     },
