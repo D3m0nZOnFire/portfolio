@@ -28,4 +28,4 @@ jobs:
             sudo git pull origin
             npm install
             npm run build
-            pm2 start ${{ secrets.APP_ID }}
+            pm2 start npm --name "portfolio" -- run start
