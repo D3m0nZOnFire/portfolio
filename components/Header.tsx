@@ -5,7 +5,7 @@ export default function Header() {
       <header className="fixed top-0 w-full z-50 backdrop-blur-sm border-b border-white/10">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          Ivo Pereira Dantas
+          Ivo Pereiras Dantas
         </Link>
         <div className="flex items-center gap-4">
           <Link href="#aboutme" className="hover:text-emerald-400 transition-colors">
