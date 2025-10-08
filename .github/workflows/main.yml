@@ -27,5 +27,4 @@ jobs:
             sudo git pull origin
             npm install
             npm run build
-            npm run start
             pm2 restart ${{ secrets.APP_ID }}
