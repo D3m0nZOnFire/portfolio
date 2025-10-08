@@ -24,7 +24,8 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
             cd ${{ secrets.VPS_PROJECT_PATH }}
+            pm2 stop ${{ secrets.APP_ID }}
             sudo git pull origin
             npm install
             npm run build
-            pm2 restart ${{ secrets.APP_ID }}
+            pm2 start ${{ secrets.APP_ID }}
