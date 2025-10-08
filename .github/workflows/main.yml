@@ -19,11 +19,11 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: appleboy/ssh-action@master
         with:
-          hosts: ${{ secrets.VPS_HOST }}
+          host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
-            cd {{ secrets.VPS_PROJECT_PATH }}
+            cd ${{ secrets.VPS_PROJECT_PATH }}
             sudo git pull origin
             npm install
             npm run start
