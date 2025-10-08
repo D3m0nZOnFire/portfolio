@@ -10,3 +10,4 @@
   -  [X] create english translation
   -  [ ] Create the system to switch languages
 -  [ ] Add work experiences
+-  [ ] Add github actions (to automatically publish main changes)
