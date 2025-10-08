@@ -6,6 +6,7 @@
 
 # To Add
 - [ ] Add English
-  -  [ ] move all text to resource file
-  -  [ ] create english translation
+  -  [X] move all text to resource file
+  -  [X] create english translation
+  -  [ ] Create the system to switch languages
 -  [ ] Add work experiences

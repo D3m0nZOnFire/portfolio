@@ -4,7 +4,7 @@ export default function AboutMeSection() {
     return (
       <section id="aboutme" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">A propos de moi</h2>
             <Card className="bg-black/50 border-white/10 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all duration-300">
               <div className="p-6">
                 <div className="grid md:grid-cols-2 gap-6">

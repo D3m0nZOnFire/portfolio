@@ -31,12 +31,12 @@
     },
     "certificates": {
         "certificatesTitle": "Certificats",
-        "seeCertifications": "Voir Certification →",
+        "seeCertificate": "Voir Certification →",
         "certificatesArray": [
             {
                 "title": "Preliminary English Test B1",
                 "organization": "Cambridge English",
-                "description": "Le B1 Preliminary est un examen international sanctionnant un niveau intermédiaire (B1) de maîtrise de la langue anglaise."
+                "description": "Le B1 Preliminary est un examen international attestant d'un niveau intermédiaire (B1) de maîtrise de la langue anglaise."
             }
         ]
     },
@@ -79,7 +79,7 @@
             },
             {
                 "title": "Less: Prise connectée",
-                "description": "Travail de TIP (travail inter-discipline centré sur un projet), "
+                "description": "Travail de TIP (travail inter-discipline centré sur un projet) "
             },
             {
                 "title": "Bot Discord",

@@ -1,0 +1,93 @@
+{
+    "globalInfo": {
+        "title": "Ivo Pereira Dantas",
+        "description": "Ivo Pereira Dantas's Portfolio",
+        "profession": "Enterprise IT Specialist CFC"
+    },
+    "aboutMe": {
+        "aboutMeTitle": "About me",
+        "languages": {
+            "languagesTitle": "Languages:",
+            "languagesDescription": "French, Portuguese, English"
+        },
+        "birthInfo": {
+            "birthdateTitle": "Date of Birth:",
+            "birthdateDescription": "September 9, 2005",
+            "birthLocationTitle": "Place of Birth:",
+            "birthLocationDescription": "Neuchâtel, Switzerland"
+        },
+        "contactInfo": {
+            "phoneTitle": "Phone:",
+            "phoneDescription": "+41 78 721 77 06",
+            "MailTitle": "Email:",
+            "MailDescription": "PereiraDI2005@outlook.com"
+        },
+        "personalInterests": [
+            "Web Development",
+            "PC Assembly / Disassembly",
+            "Animated Series",
+            "Manga"
+        ]
+    },
+    "certificates": {
+        "certificatesTitle": "Certificates",
+        "seeCertificate": "See Certificate →",
+        "certificatesArray": [
+            {
+                "title": "Preliminary English Test B1",
+                "organization": "Cambridge English",
+                "description": "The B1 Preliminary is an international exam certifying an intermediate level (B1) of English language proficiency."
+            }
+        ]
+    },
+    "formations": {
+        "formationsTitle": "Academic Background",
+        "formationsArray": [
+            {
+                "title": "Bachelor's Degree in Computer Science and Communication Systems",
+                "institution": "He-Arc, Neuchâtel",
+                "year": "2025 - Present",
+                "description": "Specialization in Software Engineering"
+            },
+            {
+                "title": "Federal Certificate of Competence in Enterprise IT",
+                "institution": "CPNE-TI, Neuchâtel",
+                "year": "2021 - 2025",
+                "description": "With integrated professional maturity"
+            },
+            {
+                "title": "Secondary School",
+                "institution": "La Fontenelle, Cernier",
+                "year": "2018 - 2021",
+                "description": ""
+            },
+            {
+                "title": "Primary School",
+                "institution": "Collège Le Lynx, Les Geneveys-sur-Coffrane",
+                "year": "2010 - 2018",
+                "description": ""
+            }
+        ]
+    },
+    "projects": {
+        "projectsTitle": "Projects",
+        "seeProjects": "See Project →",
+        "projectsArray": [
+            {
+                "title": "SchemaSuite",
+                "description": "SchemaSuite is an editor for fiber and electrical network schematics."
+            },
+            {
+                "title": "Less: Smart Plug",
+                "description": "Interdisciplinary project work focused on developing a connected plug. "
+            },
+            {
+                "title": "Bot Discord",
+                "description": "Multi-purpose Discord bot used on a server with over 10,000 members."
+            }
+        ]
+    },
+    "knowledge": {
+        "knowledgeTitle": "Knowledge"
+    }
+}
