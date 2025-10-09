@@ -6,6 +6,8 @@
     },
     "aboutMe": {
         "aboutMeTitle": "About me",
+        "personalInfosTitle": "Personal Information",
+        "personalInterestsTitle": "Personal Interests",
         "languages": {
             "languagesTitle": "Languages:",
             "languagesDescription": "French, Portuguese, English"
