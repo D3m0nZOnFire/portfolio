@@ -49,8 +49,8 @@ export const projects = [
         description:
         "Travail de TIP (travail inter-discipline centré sur un projet), ",
         tags: ["C++", "React-native", "Firebase"],
-        link: "/path-to-rapport.pdf",
-        image: "/placeholder.svg?height=200&width=400",
+        link: "https://drive.google.com/file/d/1hvJiYEhNpbW4Z7KJWRFo3swWo3aGMnDn/view?usp=drive_link",
+        image: "/images/prise_connectee.png",
     },
     {
         title: "Bot Discord",
