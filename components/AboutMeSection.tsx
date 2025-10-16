@@ -36,9 +36,10 @@ export default function AboutMeSection() {
                   <div>
                     <h3 className="text-xl font-semibold mb-4 text-emerald-50">{t('aboutMe.personalInterestsTitle')}</h3>
                     <ul className="space-y-2 text-gray-400">
-                      {(t('aboutMe.personalInterests', { returnObjects: true }) as string[]).map(
-                        (interest, index) => <li key={index}>{interest}</li>
-                      )}
+                      <li>{t('aboutMe.personalInterests.0')}</li>
+                      <li>{t('aboutMe.personalInterests.1')}</li>
+                      <li>{t('aboutMe.personalInterests.2')}</li>
+                      <li>{t('aboutMe.personalInterests.3')}</li>
                     </ul>
                   </div>
                 </div>

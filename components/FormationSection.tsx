@@ -1,4 +1,6 @@
 "use client";
+
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,6 +11,7 @@ import { formations } from "@/resources/editableData"
 gsap.registerPlugin(ScrollTrigger);
 
 export default function FormationSection() {
+  const { t } = useTranslation();
   const formationRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -50,7 +53,7 @@ export default function FormationSection() {
   return (
     <section id="formations" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Formations</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('formations.formationsTitle')}</h2>
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline */}

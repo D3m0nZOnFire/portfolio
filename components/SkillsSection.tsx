@@ -5,10 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card"
 import { Icon } from "@iconify/react"
 import { skills } from "@/resources/editableData";
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SkillsSection() {
+  const { t } = useTranslation();
   const iconsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Connaissances</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('knowledge.knowledgeTitle')}</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <SkillCategory
             title="Languages"

@@ -67,7 +67,7 @@ export default function CertificatesSection() {
                       variant="ghost"
                       className="text-emerald-400 hover:text-emerald-500 hover:bg-emerald-500/10 p-0"
                     >
-                      Voir Certification →
+                      {t('certificates.seeCertificate')}
                     </Button>
                   </Link>
               </div>

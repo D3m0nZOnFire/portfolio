@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from 'react-i18next';
 
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -13,6 +14,7 @@ import { projects } from "@/resources/editableData";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectsSection() {
+  const { t } = useTranslation();
   const projectsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() =>{
@@ -42,7 +44,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Projets</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('projects.projectsTitle')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" ref={projectsRef}>
           {projects.map((project, index) => (
             <Card
@@ -76,7 +78,7 @@ export default function ProjectsSection() {
                       variant="ghost"
                       className="text-emerald-400 hover:text-emerald-500 hover:bg-emerald-500/10 p-0"
                     >
-                      Voir Projet →
+                      {t('projects.seeProjects')}
                     </Button>
                   </Link>
                 )}
