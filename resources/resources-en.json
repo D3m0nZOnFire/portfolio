@@ -6,7 +6,7 @@
     },
     "aboutMe": {
         "aboutMeTitle": "About me",
-        "personalInfosTitle": "Personal Information",
+        "personalInfosTitle": "Personal Informations",
         "personalInterestsTitle": "Personal Interests",
         "languages": {
             "languagesTitle": "Languages:",
@@ -20,9 +20,7 @@
         },
         "contactInfo": {
             "phoneTitle": "Phone:",
-            "phoneDescription": "+41 78 721 77 06",
-            "MailTitle": "Email:",
-            "MailDescription": "PereiraDI2005@outlook.com"
+            "MailTitle": "Email:"
         },
         "personalInterests": [
             "Web Development",

@@ -1,5 +1,7 @@
 "use client";
-import { useEffect, useRef, useState, useMemo } from "react"
+import '../i18n'
+import { useParams } from 'next/navigation'
+import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -14,7 +16,17 @@ import FormationSection from "@/components/FormationSection"
 gsap.registerPlugin(ScrollTrigger);
 
 
-export default function Portfolio() {
+export default function Portfolio({ lng: forcedLng }: { lng?: string }) {
+
+    const params = useParams();
+    const lng = forcedLng ?? params?.lng;
+
+    useEffect(() => {
+        if(!lng || lng == 'fr') {
+
+        }
+    }, [lng])
+
   const sectionsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

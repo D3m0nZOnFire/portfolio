@@ -20,9 +20,7 @@
         },
         "contactInfo": {
             "phoneTitle": "Téléphone:",
-            "phoneDescription": "+41 78 721 77 06",
-            "MailTitle": "Email:",
-            "MailDescription": "PereiraDI2005@outlook.com"
+            "MailTitle": "Email:"
         },
         "personalInterests": [
             "Développement Web",

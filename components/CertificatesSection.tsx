@@ -1,4 +1,6 @@
 "use client";
+
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,6 +13,8 @@ import { certificates } from "@/resources/editableData";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CertificatesSection() {
+  const { t } = useTranslation();
+
   const certificatesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function CertificatesSection() {
   return (
     <section id="certificates" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Certificats</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{t('certificates.certificatesTitle')}</h2>
         <div className="max-w-3xl mx-auto space-y-6">
           {certificates.map((cert, index) => (
             <Card
