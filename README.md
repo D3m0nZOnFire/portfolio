@@ -1,7 +1,8 @@
 # Launch the website
-## Dev
+## Dev Build
 > npm run dev
-## "Normal"
+## Production Build
+> npm run build
 > npm run start
 
 # To Add
