@@ -1,6 +1,6 @@
-name: React Portfolio
+name: React Portfolio 🚀
 
-run-name: Deploy to ubuntu VPS by @${{ github.actor }}
+run-name: Deploy to Ubuntu VPS by @${{ github.actor }}
 
 on:
   push:
@@ -8,24 +8,39 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-24.04
-
-    strategy:
-      matrix:
-        node-version: [22.x]
+    # Use a standard, up-to-date Ubuntu runner
+    runs-on: ubuntu-24.04 
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: appleboy/ssh-action@master
+      # 1. Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Deploy to VPS via SSH and run build/start commands
+      - name: Deploy and Restart Application on VPS
+        # The appleboy/ssh-action is the one that handles the deployment
+        uses: appleboy/ssh-action@master 
         with:
+          # SSH connection details from GitHub Secrets
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           password: ${{ secrets.VPS_PASSWORD }}
+          # The commands to execute on the remote VPS
           script: |
+            # Navigate to the project directory
             cd ${{ secrets.VPS_PROJECT_PATH }}
+            
+            # Stop the current running PM2 process
             pm2 stop ${{ secrets.APP_ID }}
-            sudo git pull origin
+            
+            # Pull the latest code from the repository
+            sudo git pull origin main
+            
+            # Install/update Node.js dependencies
             npm install
+            
+            # Run the React build process
             npm run build
+            
+            # Start the application using PM2
             pm2 start npm --name "portfolio" -- run start
