@@ -1,46 +1,39 @@
-name: React Portfolio 🚀
-
-run-name: Deploy to Ubuntu VPS by @${{ github.actor }}
+name: Deploy to VPS
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main  # Ou master, selon votre branche par défaut
 
 jobs:
   deploy:
-    # Use a standard, up-to-date Ubuntu runner
-    runs-on: ubuntu-24.04 
-
+    runs-on: ubuntu-latest
+    
     steps:
-      # 1. Checkout the repository code
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
-
-      # 2. Deploy to VPS via SSH and run build/start commands
-      - name: Deploy and Restart Application on VPS
-        # The appleboy/ssh-action is the one that handles the deployment
-        uses: appleboy/ssh-action@master 
+      
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.0
         with:
-          # SSH connection details from GitHub Secrets
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
-          password: ${{ secrets.VPS_PASSWORD }}
-          # The commands to execute on the remote VPS
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
-            # Navigate to the project directory
-            cd ${{ secrets.VPS_PROJECT_PATH }}
+            cd /var/www/portfolio
             
-            # Stop the current running PM2 process
-            pm2 stop ${{ secrets.APP_ID }}
+            # Pull des dernières modifications
+            git pull origin main
             
-            # Pull the latest code from the repository
-            sudo git pull origin main
+            # Installation des dépendances (seulement si package.json a changé)
+            npm install --production=false
             
-            # Install/update Node.js dependencies
-            npm install
-            
-            # Run the React build process
+            # Build de l'application
             npm run build
             
-            # Start the application using PM2
-            pm2 start npm --name "portfolio" -- run start
+            # Redémarrage avec PM2
+            pm2 reload ecosystem.config.js --update-env
+            
+            # Afficher le statut
+            pm2 status portfolio
